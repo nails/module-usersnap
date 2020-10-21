@@ -22,6 +22,7 @@ class Ready extends \Nails\UserSnap\Event\Listener\System\Ready
     {
         $this
             ->setEvent(Events::ADMIN_READY)
+            ->setNamespace(Events::getEventNamespace())
             ->setCallback([$this, 'execute']);
     }
 
