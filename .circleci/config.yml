@@ -25,14 +25,6 @@ jobs:
             - composer-dependencies-{{ checksum "composer.json" }}
             - composer-dependencies-
 
-      # Fill in some values so compsoer doesn't get upset about the template
-      - run: sed -i 's/{vendor}/vendor/g' composer.json
-      - run: sed -i 's/{name}/name/g' composer.json
-      - run: sed -i 's/{url}/http:\/\/example.com/g' composer.json
-      - run: sed -i 's/{description}/description/g' composer.json
-      - run: sed -i 's/{namespace}/namespace\\\\/g' composer.json
-      - run: sed -i 's/{vendor}/vendor/g' composer.json
-
       # Execute Composer install
       - run: composer --no-interaction --optimize-autoloader install
 
