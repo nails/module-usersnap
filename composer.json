@@ -1,0 +1,42 @@
+{
+    "name": "nails\/module-usersnap",
+    "homepage": "https://docs.nailsapp.co.uk/modules/other/usersnap",
+    "keywords": [
+        "Nails",
+        "Shed Collective",
+        "CodeIgniter",
+        "UserSnap Module"
+    ],
+    "description": "Easily enable and configure UserSnap per environment in your app.",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "nails\/common": "dev-develop",
+        "nails\/module-admin": "dev-develop"
+    },
+    "require-dev": {
+        "phpunit\/phpunit": "8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "\\Nails\\UserSnap\\": "src\/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "\\Nails\\UserSnap\\Tests\\": "src\/"
+        }
+    },
+    "extra": {
+        "nails": {
+            "moduleName": "module-usersnap",
+            "type": "module",
+            "namespace": "\\Nails\\UserSnap\\",
+            "data": {}
+        }
+    },
+    "scripts": {
+        "test": ".\/vendor\/bin\/phpunit"
+    }
+}
