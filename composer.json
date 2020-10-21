@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "\\Nails\\UserSnap\\": "src\/"
+            "Nails\\UserSnap\\": "src\/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "\\Nails\\UserSnap\\Tests\\": "src\/"
+            "Nails\\UserSnap\\Tests\\": "src\/"
         }
     },
     "extra": {
