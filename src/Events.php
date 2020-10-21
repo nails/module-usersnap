@@ -9,7 +9,7 @@
  * @author      Nails Dev Team
  */
 
-namespace Nails\Auth;
+namespace Nails\UserSnap;
 
 use Nails\UserSnap\Event\Listener;
 use Nails\Common\Events\Base;
@@ -25,7 +25,8 @@ class Events extends Base
     public function autoload(): array
     {
         return [
-            new Listener\Boot(),
+            new Listener\Admin\Ready(),
+            new Listener\System\Ready(),
         ];
     }
 }
