@@ -15,6 +15,11 @@ use Nails\UserSnap\Event\Listener;
 use Nails\Common\Events\Base;
 use Nails\Common\Events\Subscription;
 
+/**
+ * Class Events
+ *
+ * @package Nails\UserSnap
+ */
 class Events extends Base
 {
     /**

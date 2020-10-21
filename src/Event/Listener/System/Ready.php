@@ -15,7 +15,7 @@ use Nails\Factory;
 /**
  * Class Ready
  *
- * @package Nails\Usersnap\Event\Listener\System
+ * @package Nails\UserSnap\Event\Listener\System
  */
 class Ready extends Subscription
 {
