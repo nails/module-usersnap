@@ -56,8 +56,9 @@ class Ready extends Subscription
      */
     protected function inject(): void
     {
-        $sKey         = Config::get('USERSNAP_KEY');
+        /** @var string[] [description] */
         $aEnvironment = (array) Config::get('USERSNAP_ENV');
+        $sKey         = Config::get('USERSNAP_KEY');
 
         if ($sKey && (empty($aEnvironment) || Environment::is($aEnvironment))) {
 
