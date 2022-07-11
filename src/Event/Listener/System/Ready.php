@@ -65,14 +65,13 @@ class Ready extends Subscription
             /** @var Asset $oAsset */
             $oAsset = Factory::service('Asset');
             $oAsset->inline(sprintf(
-                '(function() {
-                var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = \'//api.usersnap.com/load/%s.js\';
-                var x = document.getElementsByTagName(\'script\')[0];
-                x.parentNode.insertBefore(s, x);
-                })();',
+                'window.onUsersnapCXLoad = function(api) {
+                    api.init();
+                }
+                var script = document.createElement(\'script\');
+                script.defer = 1;
+                script.src = \'https://widget.usersnap.com/global/load/%s?onload=onUsersnapCXLoad\';
+                document.getElementsByTagName(\'head\')[0].appendChild(script);',
                 $sKey
             ), 'JS');
         }
