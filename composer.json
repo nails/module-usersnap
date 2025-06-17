@@ -45,7 +45,7 @@
     {
         "nails":
         {
-            "moduleName": "module-usersnap",
+            "moduleName": "usersnap",
             "type": "module",
             "namespace": "\\Nails\\UserSnap\\",
             "data":
